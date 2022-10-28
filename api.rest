@@ -1,0 +1,42 @@
+@host = localhost:8080
+
+// Create ordert
+POST http://{{host}}/api/orderts HTTP/1.1
+content-type: application/json
+    
+{
+    "name": "test-ordert",
+    "description": "random-description",
+    "price": 100.00
+}
+
+###
+
+// Get ordert By ID
+GET http://{{host}}/api/orderts/23 HTTP/1.1
+content-type: application/json
+
+###
+
+// Get All orderts
+GET http://{{host}}/api/orderts/ HTTP/1.1
+content-type: application/json
+
+###
+
+// Update ordert
+PUT http://{{host}}/api/orderts/23 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "updated-ordert",
+    "description": "random-description-updated",
+    "price": 100.00
+}
+
+###
+
+// Delete ordert
+DELETE http://{{host}}/api/orderts/23 HTTP/1.1
+content-type: application/json
+    
